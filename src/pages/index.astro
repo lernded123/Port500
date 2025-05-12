@@ -10,20 +10,20 @@ import WCU2 from "@components/Homepage/WCU2.astro";
 import Process from "@components/Homepage/Process.astro"
 import Pricing from "@components/Homepage/Pricing.astro";
 
-// // Optimize our landing image and pass it as props to the BaseLayout (for preloading) and Landing (for rendering)
-// import landingImage from "@assets/images/landing.jpg" // 
-// // <-- THE PATH TO THE ASSET YOU WANT TO PRELOAD - The asset must live in src
-// import { getImage } from "astro:assets";
-// const optimizedImage = await getImage({src: landingImage, format: 'avif'})
+// Optimize our landing image and pass it as props to the BaseLayout (for preloading) and Landing (for rendering)
+import landingImage from "@assets/images/landing.jpg" // 
+// <-- THE PATH TO THE ASSET YOU WANT TO PRELOAD - The asset must live in src
+import { getImage } from "astro:assets";
+const optimizedImage = await getImage({src: landingImage, format: 'avif'})
 ---
 
 <BaseLayout
   title="STYNULL"
   description="Meta description for the page"
- 
+  preloadedImage={optimizedImage}
 >
   <link rel="shortcut icon" href="data:," />
->
+</BaseLayout>
   <Hero />
   <Services />
   <!-- <About /> -->
