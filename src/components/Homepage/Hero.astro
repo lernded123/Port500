@@ -4,7 +4,8 @@
 
 ---
 import HeroPic from "../../../public/assets/images/Homepage/HeroPic.jpg"
-import HeroMobile from "../../../public/assets/images/Homepage/HeroMobile.png"
+import HeroMobile from "../../../public/assets/images/Homepage/HeroMobile.webp"
+
 
 ---
 
@@ -26,7 +27,7 @@ import HeroMobile from "../../../public/assets/images/Homepage/HeroMobile.png"
             <!--Mobile-->
             <source media="(max-width: 600px)" srcset= { HeroMobile.src } />
             <!--Tablet-->
-            <source media="(min-width: 601px)" srcset= { HeroPic.src }  />
+            <source media="(min-width: 601px)" srcset= { HeroMobile.src }  />
             <!--Desktop-->
             <source media="(min-width: 1024px)" srcset= { HeroPic.src }  />
             <img aria-hidden="true" decoding="async" src= {HeroPic.src} alt="hero" width="500" height="701">
